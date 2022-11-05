@@ -116,7 +116,7 @@ const Navbar = () => {
               Github <FaGithub size={30} />
             </a>
           </li>
-          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]'>
+          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[rgb(225,85,54)]'>
             <a
               className='flex justify-between items-center w-full text-gray-300'
               href='mailto:tudor.s.popescu@gmail.com'
@@ -152,7 +152,7 @@ const Navbar = () => {
             ><FaGithub size={30} />
             </a>
           </li>
-          <li className='w-[60px] h-[60px] flex bg-[#6fc2b0]'>
+          <li className='w-[60px] h-[60px] flex bg-[rgb(225,85,54)]'>
             <a
               className='flex justify-between items-center w-full text-gray-300'
               href='mailto:tudor.s.popescu@gmail.com'
