@@ -4,32 +4,19 @@ import RealEst from '../assets/projects/realestate.png'
 export const data=[
     {
         id:1,
-        name:"React JS Application",
+        name:"iOS - My Budget App",
         image:WorkIm,
-        github:"",
+        github:'https://github.com/Tpopescu33/My_Budget_App',
         live:"",
     },
     {
         id:2,
-        name:"React JS Application",
+        name:"React JS Application - Resturant Reservation",
         image:RealEst,
-        github:"",
+        github:'https://github.com/Tpopescu33/Restaurant-Reservation-System',
         live:"",
     },
-    {
-        id:3,
-        name:"React JS Application",
-        image:WorkIm,
-        github:"",
-        live:"",
-    },
-    {
-        id:4,
-        name:"React JS Application",
-        image:RealEst,
-        github:"",
-        live:"",
-    },
+   
 
 
 ]
