@@ -95,10 +95,11 @@ const Navbar = () => {
           </Link>
         </li>
       </ul>
+      
 
       {/* Social icons */}
       <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
-        <ul>
+        
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600'>
             <a
               className='flex justify-between items-center w-full text-gray-300'
@@ -130,8 +131,45 @@ const Navbar = () => {
               Resume <BsFillPersonLinesFill size={30} />
             </a>
           </li>
+        
+      </div>
+
+
+      {/* Social icons mobile*/}
+      <div className='fixed top-0 left-[25%] lg:hidden'>
+        <ul className='inline-flex'>
+          <li className='w-[60px] h-[60px] flex  bg-blue-600'>
+            <a
+              className='flex justify-between items-center w-full text-gray-300'
+              href='https://www.linkedin.com/in/tudor-popescu-527684135/'
+            ><FaLinkedin size={30} />
+            </a>
+          </li>
+          <li className='w-[60px] h-[60px] flex  bg-[#333333]'>
+            <a
+              className='flex justify-between items-center w-full text-gray-300'
+              href='https://github.com/Tpopescu33'
+            ><FaGithub size={30} />
+            </a>
+          </li>
+          <li className='w-[60px] h-[60px] flex bg-[#6fc2b0]'>
+            <a
+              className='flex justify-between items-center w-full text-gray-300'
+              href='mailto:tudor.s.popescu@gmail.com'
+            ><HiOutlineMail size={30} />
+            </a>
+          </li>
+          <li className='w-[60px] h-[60px] flex  bg-[#565f69]'>
+            <a
+              className='flex justify-between items-center w-full text-gray-300'
+              href={Resume} download><BsFillPersonLinesFill size={30} />
+            </a>
+          </li>
         </ul>
       </div>
+
+
+      
     </div>
   );
 };
