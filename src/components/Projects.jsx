@@ -1,11 +1,16 @@
 import React from 'react';
 import { data } from "../data/data.js";
-
+import { useState } from "react";
+import Modal from "./Modal";
 
 const Projects = () => {
 
     // projects file
     const project = data;
+
+    const [openModal, setOpenModal] = useState(false);
+    const [name, setName] = useState("");
+    const [info, setInfo] = useState("");
     //setProject(data);
   
   return (
@@ -46,25 +51,35 @@ const Projects = () => {
         </a>
         {/* eslint-disable-next-line */}
         <a href={item.live} target="_blank">
-          <button
+          {/* <button
             className="text-center rounded-lg px-4 py-3 m-2
                        bg-white text-gray-700 font-bold text-lg"
           >
             Live
-          </button>
+          </button> */}
         </a>
-        <a target="_blank">
-          <button
+        <a >
+          <button onClick={() => {setOpenModal(true); setInfo(item.info); setName(item.name)}} 
             className="text-center rounded-lg px-4 py-3 m-2
                        bg-white text-gray-700 font-bold text-lg"
           >
             Info
           </button>
+         
         </a>
       </div>
+     
     </div>
+ 
   </div>
 ))}
+
+<Modal 
+      open={openModal} 
+      onClose={() => setOpenModal(false)} 
+      info={info}
+      name={name}
+      />
 
 
 </div>
