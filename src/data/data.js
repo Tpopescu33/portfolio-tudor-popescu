@@ -12,7 +12,7 @@ export const data=[
     },
     {
         id:2,
-        name:"React JS Application - Resturant Reservation",
+        name:"React JS Application - Restaurant Reservation",
         image:RRS,
         github:'https://github.com/Tpopescu33/Restaurant-Reservation-System',
         live:"",
