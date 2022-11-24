@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Modal from "./Modal";
 import HTML from '../assets/html.png';
 import CSS from '../assets/css.png';
 import JavaScript from '../assets/javascript.png';
@@ -12,9 +12,32 @@ import Cpp from '../assets/cpp.png';
 import Swift from '../assets/swift.webp';
 import SQL from '../assets/sql.png';
 import Java from '../assets/java.png';
-
+import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Skills = () => {
+
+    const nameJS = "JavaScript";
+    const infoJS = "test";
+    const nameReact = "ReactJS";
+    const infoReact = "test";
+    const nameNode = "NodeJS";
+    const infoNode = "test";
+    const nameAWS = "Amazon Web Services";
+    const infoAWS = "test";
+    const nameCpp = "C++";
+    const infoCpp = "test";
+    const nameSQL = "MySQL";
+    const infoSQL = "test";
+    const nameSwift = "Swift";
+    const infoSwift = "test";
+    const nameGH = "Github";
+    const infoGH = "test";
+    const [openModal, setOpenModal] = useState(false);
+    const [name, setName] = useState("");
+    const [info, setInfo] = useState("");
+    
+
   return (
     <div name='skills' className='w-full h-screen bg-[#0a192f] text-gray-300'>
       {/* Container */}
@@ -26,40 +49,52 @@ const Skills = () => {
 
           <div className='w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8'>
              
-              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+            <motion.button 
+                className='shadow-md shadow-[#040c16]' 
+                whileHover={{scale: 1.1}} 
+                whileTap={{scale: 0.9}} 
+                onClick={() => {setOpenModal(true); setInfo(infoJS); setName(nameJS)}}>
                   <img className='w-20 mx-auto' src={JavaScript} alt="HTML icon" />
                   <p className='my-4'>JAVASCRIPT</p>
-              </div>
-              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+            </motion.button>
+              <button className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'  onClick={() => {setOpenModal(true); setInfo(infoReact); setName(nameReact)}}>
                   <img className='w-20 mx-auto' src={ReactImg} alt="HTML icon" />
                   <p className='my-4'>REACT</p>
-              </div>
+              </button>
              
-              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+              <button className='shadow-md shadow-[#040c16] hover:scale-110 duration-500' onClick={() => {setOpenModal(true); setInfo(infoNode); setName(nameNode)}}>
                   <img className='w-20 mx-auto' src={Node} alt="HTML icon" />
                   <p className='my-4'>NODE JS</p>
-              </div>
+              </button>
               
-              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+              <button className='shadow-md shadow-[#040c16] hover:scale-110 duration-500' onClick={() => {setOpenModal(true); setInfo(infoAWS); setName(nameAWS)}}>
                   <img className='w-20 mx-auto' src={AWS} alt="HTML icon" />
                   <p className='my-4'>AWS</p>
-              </div>
-              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+              </button>
+              <button className='shadow-md shadow-[#040c16] hover:scale-110 duration-500' onClick={() => {setOpenModal(true); setInfo(infoCpp); setName(nameCpp)}}>
                   <img className='w-20 mx-auto' src={Cpp} alt="HTML icon" />
                   <p className='my-4'>C++</p>
-              </div>
-              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+              </button>
+              <button className='shadow-md shadow-[#040c16] hover:scale-110 duration-500' onClick={() => {setOpenModal(true); setInfo(infoSQL); setName(nameSQL)}}>
                   <img className='w-20 mx-auto' src={SQL} alt="HTML icon" />
                   <p className='my-4'> MYSQL</p>
-              </div>
-              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+              </button>
+              <button className='shadow-md shadow-[#040c16] hover:scale-110 duration-500' onClick={() => {setOpenModal(true); setInfo(infoSwift); setName(nameSwift)}}>
                   <img className='w-20 mx-auto' src={Swift} alt="HTML icon" />
                   <p className='my-4'>Swift</p>
-              </div>
-              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                  <img className='w-20 mx-auto' src={Java} alt="HTML icon" />
-                  <p className='my-4'>Java</p>
-              </div>
+              </button>
+              <button className='shadow-md shadow-[#040c16] hover:scale-110 duration-500' onClick={() => {setOpenModal(true); setInfo(infoGH); setName(nameGH)}}>
+              <img className='w-20 mx-auto' src={GitHub} alt="HTML icon" />  
+              
+                  <p className='my-4'>Github</p>
+              </button>
+              <Modal 
+      open={openModal} 
+      onClose={() => setOpenModal(false)} 
+      info={info}
+      name={name}
+      />
+     
           </div>
       </div>
     </div>
