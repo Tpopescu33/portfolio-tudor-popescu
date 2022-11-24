@@ -61,18 +61,7 @@
     justify-content: center;
     overflow-y: hidden;
   }
-  .modal {
-    width: clamp(50%, 700px, 90%);
-    height: min(50%, 300px);
-    position: fixed;
-    margin: auto;
-    padding: 0 2rem;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-  }
+  
   
   
 
@@ -80,15 +69,21 @@
   .modalContainer {
     
     width: clamp(50%, 700px, 90%);
-    height: min(50%, 300px);
+    min-height: 300px;
+    max-height: 700px;
     position: fixed;
     margin: auto;
     padding: 0 2rem;
     border-radius: 12px;
     display: flex;
+    
     flex-direction: column;
     align-items: center;
-    background-color: #0b4090;
+    background-image: linear-gradient(
+      to right,
+      rgba(112, 157, 255, 0.8),
+      hsla(242, 74%, 61%, 0.8)   
+  )!important;
     box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
     
   }
@@ -102,26 +97,31 @@
   
   .modalRight {
     width: 100%;
+    justify-content: center;
+    align-items: center;
   }
   
-  .closeBtn {
-    position: fixed;
-    top: 8px;
-    right: 8px;
-  }
+  
   
   .content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 2rem;
     padding: 1rem 2rem;
   }
   
   .btnContainer {
     display: flex;
+    margin-top: 1rem;
     padding: 1rem 1rem;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    bottom: 10px;
+    
+    
   }
   .btnContainer button {
     width: 100%;
@@ -130,6 +130,7 @@
     /* border: none; */
     border: 1px solid #411b57;
     /* color: #ffffff; */
+    width: 200px;
   }
   
   .btnPrimary {

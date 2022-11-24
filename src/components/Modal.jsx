@@ -45,19 +45,21 @@ const Modal = ({ open, onClose, name, info }) => {
 
       >
         
-        <div className='modalRight'>
-          <button className='closeBtn' onClick={onClose}>
-            X
-          </button>
+        
+          
           <div className='content'>
-            <p>{name}</p>
+            <p className='text-3xl font-bold text-gray-300'>{name}</p>
             <h1>{info}</h1>
             
           </div>
           <div className='btnContainer'>
-            
+            <button className="text-center rounded-lg px-4 py-3 m-2 bottom-10
+                       bg-white text-gray-700 font-bold text-lg" 
+                  onClick={onClose}>
+            Close
+          </button>
           </div>
-        </div>
+        
       </motion.div>
       
     </Backdrop>
