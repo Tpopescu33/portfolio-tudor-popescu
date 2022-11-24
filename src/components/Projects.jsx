@@ -2,6 +2,7 @@ import React from 'react';
 import { data } from "../data/data.js";
 import { useState } from "react";
 import Modal from "./Modal";
+import { AnimatePresence } from 'framer-motion';
 
 const Projects = () => {
 
@@ -74,13 +75,15 @@ const Projects = () => {
   </div>
 ))}
 
-<Modal 
-      open={openModal} 
-      onClose={() => setOpenModal(false)} 
-      info={info}
-      name={name}
-      />
 
+    <AnimatePresence>
+                {openModal&&<Modal 
+                open={openModal} 
+                onClose={() => setOpenModal(false)} 
+                info={info}
+                name={name}
+                />}
+            </AnimatePresence> 
 
 </div>
       </div>

@@ -1,6 +1,7 @@
 import React from 'react';
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Backdrop from './Backdrop';
+import { BsReverseLayoutTextWindowReverse } from 'react-icons/bs';
 
 const dropIn = {
   hidden: {
@@ -28,12 +29,14 @@ const Modal = ({ open, onClose, name, info }) => {
   if (!open) return null;
   return (
 
-     
+   
     <Backdrop onClick={onClose}>
+      
       <motion.div
         onClick={(e) => {
           e.stopPropagation();
         }}
+        key="modal"
         className='modalContainer'
         variants={dropIn}
         initial="hidden"
@@ -56,7 +59,9 @@ const Modal = ({ open, onClose, name, info }) => {
           </div>
         </div>
       </motion.div>
+      
     </Backdrop>
+  
     
   );
 };

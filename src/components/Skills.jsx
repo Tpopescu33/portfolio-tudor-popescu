@@ -88,12 +88,15 @@ const Skills = () => {
               
                   <p className='my-4'>Github</p>
               </button>
-              <Modal 
-      open={openModal} 
-      onClose={() => setOpenModal(false)} 
-      info={info}
-      name={name}
-      />
+             
+             <AnimatePresence>
+                {openModal&&<Modal 
+                open={openModal} 
+                onClose={() => setOpenModal(false)} 
+                info={info}
+                name={name}
+                />}
+            </AnimatePresence> 
      
           </div>
       </div>
