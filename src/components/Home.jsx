@@ -1,6 +1,8 @@
 import React from 'react';
 import { HiArrowNarrowRight } from 'react-icons/hi';
 import { Link } from 'react-scroll';
+import Resume from "../assets/Resume-Tudor-Popescu.pdf"
+import { BsDownload } from 'react-icons/bs';
 
 const Home = () => {
   return (
@@ -15,7 +17,7 @@ const Home = () => {
         <p className='text-[#8892b0] py-4 max-w-[700px]'>
           I’m a software developer specializing in building and designing full-stack web applications and mobile applications.
         </p>
-        <div>
+        <div className="">
         <Link to='work' smooth={true} duration={500}>
         <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-yellow-600 hover:border-yellow-600'>
             View Projects
@@ -23,7 +25,19 @@ const Home = () => {
               <HiArrowNarrowRight className='ml-3 ' />
             </span>
           </button>
+
+          
+
+
           </Link>
+          <a href={Resume} download>
+          <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-[#565f69]' >
+            Download Resume
+            <span className='duration-300'>
+              <BsDownload className='ml-3 ' />
+            </span>
+          </button>
+          </a>
         </div>
       </div>
     </div>

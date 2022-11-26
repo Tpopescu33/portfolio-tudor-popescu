@@ -16,7 +16,7 @@ export const data=[
         image:RRS,
         github:'https://github.com/Tpopescu33/Restaurant-Reservation-System',
         live:"",
-        info:"This is a Full stack application using MySQL, React, Node and Express. The user has the option to create an account and accumulate points by login in. The user needs to create a reservation by picking the date and time and entering some information about themselves. They then need to pick a table using the custom table picker. They can only pick tables which are available at that time. There is also a feature where the resturant owner can view and cancel reservations if needed."
+        info:"This is a Full stack application using MySQL, React, Node and Express. The user has the option to create an account and accumulate points by login in. The user needs to create a reservation by picking the date and time and entering some information about themselves. They then need to pick a table using the custom table picker. They can only pick tables which are available at that time."
     },
    
 
