@@ -24,7 +24,7 @@ export const data=[
         image:BC,
         github:'https://github.com/Tpopescu33/DataScience/blob/main/FinalProject.ipynb',
         live:"",
-        info: ""
+        info:"In this project our group analyzed the breast cancer data set. The data set contained different measurements of tumors and if they where malignant or benign. We cleaned up the data and dropped certain varibles that didn't add anything to the models. We ran a logistic regression model with 93% accuracy and a random forest model that gave us 94% accuracy."
     },
    
 
