@@ -136,7 +136,7 @@ const Navbar = () => {
 
 
       {/* Social icons mobile*/}
-      <div className='fixed top-0 left-[25%] lg:hidden'>
+      <div className='fixed top-0 left-[20%] lg:hidden'>
         <ul className='inline-flex'>
           <li className='w-[60px] h-[60px] flex  bg-blue-600'>
             <a
