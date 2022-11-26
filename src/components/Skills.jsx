@@ -1,6 +1,6 @@
 import React from 'react';
 import Modal from "./Modal";
-import HTML from '../assets/html.png';
+import Python from '../assets/python.png';
 import CSS from '../assets/css.png';
 import JavaScript from '../assets/javascript.png';
 import ReactImg from '../assets/react.png';
@@ -33,6 +33,8 @@ const Skills = () => {
     const infoSwift = "At UH one of my electives was ubiqutous computing, Which turned out to be iOS design. We where exposed to swiftUi and xcode. We made small apps throught the course that exposed us to all the different functionalities apple made available to design their apps, everything from creating simple card matching games to diving into apple maps and geotagging. By the end of the course I was able to combine my learned knowledge and create a fully functioning iOS application.";
     const nameGH = "Github";
     const infoGH = "I was exposed to and learned how to use github well before our professors ever mentioned it in univversity. During our software design class where the professor had us create fullstack applications from scratch, he highly recommended we use some form of source control. Up until this point I have used github, but not in a group enviornment. We used github to create a seperate branch for each team member and would merge our code once a week at least, more often if we where sprinting.";
+    const infoPy = "I mainly used python in my data science classes running supervised and unsupervised models. These include Logistic and Linear regression, random forests, decision trees, neural networks, KNN and more. I used python to manipulate data sets and make accurate predictions for supervised tasks and discover exploitable similarities in unsupervised tasks.";
+    const namePy = "Python";
     const [openModal, setOpenModal] = useState(false);
     const [name, setName] = useState("");
     const [info, setInfo] = useState("");
@@ -120,6 +122,16 @@ const Skills = () => {
               <img className='w-20 mx-auto' src={GitHub} alt="HTML icon" />  
               
                   <p className='my-4'>Github</p>
+            </motion.button>
+
+            <motion.button 
+                className='shadow-md shadow-[#040c16]' 
+                whileHover={{scale: 1.1}} 
+                whileTap={{scale: 0.9}} 
+                onClick={() => {setOpenModal(true); setInfo(infoPy); setName(namePy)}}>
+              <img className='w-20 mx-auto' src={Python} alt="HTML icon" />  
+              
+                  <p className='my-4'>Python</p>
             </motion.button>
              
              <AnimatePresence>
